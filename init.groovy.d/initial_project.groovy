@@ -6,11 +6,11 @@ import jenkins.plugins.git.*
 import org.jenkinsci.plugins.workflow.multibranch.*
  
 // Git repo url containing a Jenkinsfile
-String gitRepoUrl = "https://github.com/nelscata/test-jenkins"
+String gitRepoUrl = "https://github.com/nelscata/flugel-it"
  
 // Job name based on repository name
-String jobName = gitRepoUrl.tokenize(".")[-2].tokenize("/")[-1]
- 
+// String jobName = gitRepoUrl.tokenize(".")[-2].tokenize("/")[-1]
+String jobName = "Petclinic" 
  
 // Create MultiBranch pipeline
 Jenkins jenkins = Jenkins.get()
