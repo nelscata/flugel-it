@@ -13,7 +13,7 @@ pipeline {
             // Get some code from a GitHub repository
             git 'https://github.com/spring-projects/spring-petclinic'
 
-            sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            sh "mvn clean package"
 
          }
       }
