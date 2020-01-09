@@ -11,9 +11,9 @@ pipeline {
       stage('Build') {
          steps {
             // Get some code from a GitHub repository
-            git 'https://github.com/spring-projects/spring-petclinic'
+            //git 'https://github.com/spring-projects/spring-petclinic'
 
-            sh "mvn clean package"
+            //sh "mvn clean package"
 
          }
       }
