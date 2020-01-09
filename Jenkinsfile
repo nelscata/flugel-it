@@ -13,7 +13,9 @@ pipeline {
             // Get some code from a GitHub repository
             //git 'https://github.com/spring-projects/spring-petclinic'
 
+            //Disabled build for master branch
             //sh "mvn clean package"
+            sh "echo 'Master Build disabled'"
 
          }
       }
