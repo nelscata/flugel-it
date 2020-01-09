@@ -11,6 +11,11 @@ RUN /usr/local/bin/install-plugins.sh \
   pipeline-stage-view:latest \
   git:latest \
   credentials:latest
+
+# Go to the correct Directory in order to copy the files into the container
+WORKDIR /tmp/path/
+
+EXPOSE 8080
  
 # Add groovy script to Jenkins hook
 # Setup pipeline and maven
