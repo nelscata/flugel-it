@@ -12,6 +12,10 @@ resource "aws_instance" "jenkins_demo" {
   key_name = aws_key_pair.mykeypair.key_name
 
   provisioner "local-exec" {
+    command = "ssh-keyscan -H ${self.public_ip} >> ~/.ssh/known_hosts"
+  }
+
+  provisioner "local-exec" {
     command = "ansible-playbook -u ubuntu -i '${self.public_ip},' --private-key ${var.PATH_TO_PRIVATE_KEY} playbook.yml" 
   }
 
